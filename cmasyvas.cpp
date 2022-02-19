@@ -9,7 +9,7 @@ using std::string;
 
 struct data {
     string vardas = "", pavarde = ""; //vardas ir pavarde
-    int paz[10] = {0}, egz = 0; //suvesti pazymiai
+    int paz[4] = {0}, egz = 0; //suvesti pazymiai
     double vid=0; //skaicuojamas pazymiu vidurkis
     int sud=0; //sudedami pazymiai
     double galutinis=0; // apskaiciuojamas galutinis
@@ -51,7 +51,7 @@ void ivestis(data& temp)
     cout << "veskite varda: "; cin>>temp.vardas;
     cout << "veskite pavarde: "; cin>>temp.pavarde;
   
-    for(int i=0;i<10;i++)
+    for(int i=0;i<4;i++)
     {
         cout << "Iveskite " << i+1 << "-a pazymi."; cin >> temp.paz[i];
         temp.sud+=temp.paz[i];
@@ -72,7 +72,7 @@ void isved(data& temp, int pasirinkimas)
     }
     else if(pasirinkimas==0)
     {
-        temp.vid = (temp.paz[5]+temp.paz[6])/2;
+        temp.vid = (temp.paz[2]+temp.paz[3])/2;
         cout<<std::setw(20)<<"Galutinis (med.)"<<std::endl;
 
     }
