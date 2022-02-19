@@ -67,7 +67,7 @@ void isved(data& temp, int pasirinkimas)
     cout<<std::setw(15)<<"Vardas"<<std::setw(15)<<"Pavarde";
     if(pasirinkimas==1)
     {
-        temp.vid = temp.sud/10;
+        temp.vid = temp.sud/4;
         cout<<std::setw(20)<<"Galutinis (vid.)"<<std::endl;
     }
     else if(pasirinkimas==0)
